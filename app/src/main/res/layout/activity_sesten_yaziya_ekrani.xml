@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".SestenYaziyaEkrani"
+    android:background="@color/backgroundColor">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/colorPrimary">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/kamera"
+        android:src="@drawable/kamera"
+        />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Kamerayı Aç"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"/>
+
+
+
+
+    <ImageView
+        android:layout_marginLeft="86dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/galeri"
+        android:src="@drawable/galeri"
+        />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Galeriyi Aç"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+
+
+
+
+
+    <ImageView
+        android:layout_marginLeft="156dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/yardim"
+        android:src="@drawable/yardim"
+        />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Yardım"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"/>
+
+    <Switch
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="226dp"
+        android:id="@+id/komut"
+        android:checked="true"
+        android:theme="@style/SwitchCompatTheme"/>
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Komut 0/I"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/kaydet"
+        android:layout_marginLeft="310dp"
+        android:src="@drawable/ic_save_black_24dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onKaydet"
+        />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Kaydet"
+        android:layout_marginLeft="305dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+</RelativeLayout>
+
+
+</android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:paddingBottom="40dp"
+        android:id="@+id/scroll">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/baslik"
+                android:longClickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:maxLines="1"
+                android:maxLength="19"
+                android:hint="Başlık :"
+                android:textColorHint="#878787"
+                android:textColor="#000"
+                android:textSize="22dp"
+                android:layout_marginTop="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#888888"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="80dp"/>
+
+
+            <EditText
+                android:id="@+id/icerik"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/backgroundColor"
+                android:longClickable="false"
+                android:gravity="top"
+                android:hint="Sözleriniz Burada Yazıya Çevirilecek...\n\n\n\n\n\n\n\na"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </ScrollView>
+<ImageView
+    android:layout_width="1dp"
+    android:layout_height="1dp"
+    android:id="@+id/resim"
+    android:src="@drawable/ic_launcher_background"/>
+
+<ImageButton
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:id="@+id/sesYazi"
+    android:layout_gravity="center"
+    android:background="@drawable/button_background"/>
+
+</LinearLayout>
